@@ -1,0 +1,52 @@
+POST http://localhost:3001/users
+Content-Type: application/json
+
+{
+    "name": "name",
+    "email": "someemail@example.com",
+    "password": "somepassword"
+}
+
+### login
+
+POST http://localhost:3001/users/login
+Content-Type: application/json
+
+{
+    "name": "xand",
+    "email": "xand@example.com",
+    "password": "somepassword"
+}
+
+###
+
+GET http://localhost:3001/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDJlZmEwNzQ3N2MxZDU0ZGU4ZmY0MiIsImlhdCI6MTY5MTY2MzE5NSwiZXhwIjoxNjkxNzA2Mzk1fQ.qn_rR0dPw-xhnqL4-iedtnSmy-zhEypLYhcXEh02HFE
+
+
+###
+
+POST http://localhost:3001/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDJlZmEwNzQ3N2MxZDU0ZGU4ZmY0MiIsImlhdCI6MTY5MTgzMTY5MiwiZXhwIjoxNjkxODc0ODkyfQ.Wt6mG-GWchlLYoHQBJ0JxtGafMzzw0CLcgY6TraIGxM
+
+{
+    "data":[
+        {
+            "id":1,
+            "task":"fix the table"
+        }
+    ]
+}
+
+###
+DELETE http://localhost:3001/tasks/64ce628b6e3f32f43557f875
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDJlZmEwNzQ3N2MxZDU0ZGU4ZmY0MiIsImlhdCI6MTY5MTY2MzE5NSwiZXhwIjoxNjkxNzA2Mzk1fQ.qn_rR0dPw-xhnqL4-iedtnSmy-zhEypLYhcXEh02HFE
+
+###
+
+POST http://localhost:3001/users/verifyToken
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Y2U1ZDcwYjMwODFiMWRkM2NkZGI1MiIsImlhdCI6MTY5MTU1MjMyOCwiZXhwIjoxNjkxNTU1OTI4fQ.-mtn34iQQy3uuAmYB9Tlm3yW5cATLdVsaa7GT1aA17M"
+}
