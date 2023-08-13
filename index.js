@@ -13,7 +13,10 @@ mongoose.connect("mongodb+srv://xanderferrero2:savePOINTS@tasknoting.lpqqt2h.mon
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({
-    origin:["https://mern-task-recorder.onrender.com","http://127.0.0.1:4173/"]
+    origin:[
+        "https://mern-task-recorder.onrender.com",
+        "http://127.0.0.1:4173",
+        "http://127.0.0.1:5500"]
 }))
 
 app.use("/api/tasks", require("./routes/TasksRouter"));
