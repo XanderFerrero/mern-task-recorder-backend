@@ -25,13 +25,14 @@ app.use("/api/users", require("./routes/UsersRouter"));
 // serve frontend
 
 // if(process.env.NODE_ENV === "production"){
-//     app.use(express.static(path.join(__dirname,'../client/dist')))
-//     app.get('*', (req,res) => res.sendFile(path.resolve(__dirname,'../','client','dist','index.html')))
+    app.use(express.static(path.join(__dirname,'dist')))
+    app.get('*', (req,res) => res.sendFile(path.resolve(__dirname,'dist','index.html')))
+
 // }else{
 //     app.get('/',(req,res) => res.send("pls set to production"))
 // }
 
-app.get("/", (req,res) => {res.send("API FOR TASK RECORDER")})
+// app.get("/", (req,res) => {res.send("API FOR TASK RECORDER")})
 
 app.get("/hi",(req,res) => {
     res.status(400).send({error:"you shouldn't be here"});
