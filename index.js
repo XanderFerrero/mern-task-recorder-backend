@@ -16,7 +16,7 @@ app.use(cors({
     origin:[
         "https://mern-task-recorder.onrender.com",
         "http://127.0.0.1:4173",
-        "http://127.0.0.1:5500"]
+        "http://localhost:5500"]
 }))
 
 app.use("/api/tasks", require("./routes/TasksRouter"));
@@ -46,3 +46,4 @@ app.listen(3001,() => {
     console.log(process.env.PORT)
     console.log("Hello World");
 })
+ 
